@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   # GET /
   root 'static_pages#home'
 
@@ -12,4 +13,9 @@ Rails.application.routes.draw do
 
   # RESOURCES /users
   resources :users
+
+  # Sessions
+  get    '/login',   to: 'sessions#new'
+  post   '/login',   to: 'sessions#create'
+  delete '/logout',  to: 'sessions#destroy'
 end
