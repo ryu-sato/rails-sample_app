@@ -53,6 +53,11 @@
         <%= best_in_place @user, :name, display_with: proc{|u| link_to u, user_path(u) } %>
       </div>
       <div>
+        <label class="label label-default">pattern6:</label>
+        <label>name:</label>
+        <%= best_in_place @user, :name, display_with: lambda{|u| link_to u, user_path(u) } %>
+      </div>
+      <div>
         <label class="label label-default">sample</label>
         <%= link_to link_to @user, user_path(@user) %>
       </div>
