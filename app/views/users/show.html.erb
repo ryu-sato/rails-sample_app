@@ -1,4 +1,10 @@
 <% provide(:title, @user.name) %>
+<div>
+  <%# その場で編集 -%>
+  <a id="edit_in_place" class="btn btn-info" href="#">
+    <span class="glyphicon glyphicon-edit"></span> <%= t('.action.edit_in_place', default: 'Edit in place') %>
+  </a>
+</div>
 <div class="row">
   <aside class="col-md-4">
     <section class="user_info">
@@ -6,6 +12,50 @@
         <%= gravatar_for @user %>
         <%= @user.name %>
       </h1>
+<br clear="all" />
+      <%
+        array = User.select(:id, :name).map{|u| [ u.name, u.name ] }.flatten
+        collection = {"": ""}.merge(Hash[*array])
+      %>
+      <div>
+        <label class="label label-default">pattern1:</label>
+        <label>name:</label>
+        <%= best_in_place @user, :name, as: :select, collection: collection %>
+      </div>
+      <div>
+        <label class="label label-default">pattern2:</label>
+        <label>name:</label>
+        <%= best_in_place @user, :name, as: :select, collection: collection,
+                          display_with: lambda{|name| "hoge".html_safe } %>
+      </div>
+      <div>
+        <label class="label label-default">pattern3:</label>
+        <label>name:</label>
+        <%#= link_to do %>
+           <%= best_in_place @user, :name, as: :select, collection: collection,
+                             display_with: proc{|u| link_to u, user_path(u) } %>
+        <%# end %>
+      </div>
+      <div>
+        <label class="label label-default">pattern4:</label>
+        <label>name:</label>
+        <span class="best_in_place"
+              data-url="/users/<%= @user.id %>"
+              data-object="user"
+              data-attribute="name"
+              data-activator="<%= "##{dom_id(@user)}_edit" %>"
+              data-type="select"
+              data-collection="{''=>'', '1'=>'admin'}"><%= link_to @user.name , @user %></span>
+      </div>
+      <div>
+        <label class="label label-default">pattern5:</label>
+        <label>name:</label>
+        <%= best_in_place @user, :name, display_with: proc{|u| link_to u, user_path(u) } %>
+      </div>
+      <div>
+        <label class="label label-default">sample</label>
+        <%= link_to link_to @user, user_path(@user) %>
+      </div>
     </section>
   </aside>
 </div>
