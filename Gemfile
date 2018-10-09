@@ -12,6 +12,9 @@ gem 'jbuilder',     '2.7.0'
 gem 'bcrypt',       '3.1.11'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 gem 'therubyracer', platforms: :ruby
+gem 'faker',          '1.7.3'
+gem 'will_paginate'
+gem 'bootstrap-will_paginate'
 
 group :development, :test do
   gem 'sqlite3', '1.3.13'
