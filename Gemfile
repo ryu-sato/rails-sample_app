@@ -1,9 +1,9 @@
 source 'https://rubygems.org'
 
 gem 'rails',        '5.1.2'
-gem 'bootstrap-sass', '3.3.7'
+gem 'bootstrap-sass', '~> 3.0.0'
 gem 'puma',         '3.9.1'
-gem 'sass-rails',   '5.0.6'
+gem 'sass-rails',   '~> 5.0.0'
 gem 'uglifier',     '3.2.0'
 gem 'coffee-rails', '4.2.2'
 gem 'jquery-rails', '4.3.1'
@@ -12,7 +12,11 @@ gem 'jbuilder',     '2.7.0'
 gem 'bcrypt',       '3.1.11'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 gem 'therubyracer', platforms: :ruby
+
+# テストとDBシードでの仮想データ作成用
 gem 'faker',          '1.7.3'
+
+# ページネーション用
 gem 'will_paginate'
 gem 'bootstrap-will_paginate'
 
