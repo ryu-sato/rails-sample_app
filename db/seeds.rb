@@ -6,6 +6,11 @@ User.create!(name:  "Example User",
              activated: true,
              activated_at: Time.zone.now)
 
+10.times do |n|
+  content = Faker::Lorem.sentence
+  User.first.microposts.create!(content: content)
+end
+
 99.times do |n|
   name  = Faker::Name.name
   email = "example-#{n+1}@railstutorial.org"
