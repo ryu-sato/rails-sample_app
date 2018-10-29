@@ -17,8 +17,8 @@ gem 'therubyracer', platforms: :ruby
 gem 'faker',                   '1.7.3'
 
 # 画像アップロード
-gem 'carrierwave',             '~> 1.2.2'
-gem 'mini_magick',             '~> 4.7.0'
+gem 'carrierwave',             '1.2.2'
+gem 'mini_magick',             '4.7.0'
 
 # ページネーション用
 gem 'will_paginate'
@@ -45,7 +45,7 @@ end
 
 group :production do
   gem 'pg',  '0.18.4'
-  gem 'fog', '~> 1.42'
+  gem 'fog', '1.42'
 end
 
 # Windows環境ではtzinfo-dataというgemを含める必要があります
