@@ -1,20 +1,24 @@
 source 'https://rubygems.org'
 
-gem 'rails',        '5.1.2'
-gem 'bootstrap-sass', '~> 3.3.7'
-gem 'puma',         '3.9.1'
-gem 'sass-rails', '>= 3.2'
-gem 'uglifier',     '3.2.0'
-gem 'coffee-rails', '4.2.2'
-gem 'jquery-rails', '4.3.1'
-gem 'turbolinks',   '5.0.1'
-gem 'jbuilder',     '2.7.0'
-gem 'bcrypt',       '3.1.11'
+gem 'rails',                   '5.1.2'
+gem 'bootstrap-sass',          '~> 3.3.7'
+gem 'puma',                    '3.9.1'
+gem 'sass-rails',              '>= 3.2'
+gem 'uglifier',                '3.2.0'
+gem 'coffee-rails',            '4.2.2'
+gem 'jquery-rails',            '4.3.1'
+gem 'turbolinks',              '5.0.1'
+gem 'jbuilder',                '2.7.0'
+gem 'bcrypt',                  '3.1.11'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 gem 'therubyracer', platforms: :ruby
 
 # テストとDBシードでの仮想データ作成用
-gem 'faker',          '1.7.3'
+gem 'faker',                   '1.7.3'
+
+# 画像アップロード
+gem 'carrierwave',             '1.2.2'
+gem 'mini_magick',             '4.7.0'
 
 # ページネーション用
 gem 'will_paginate'
@@ -40,7 +44,8 @@ group :test do
 end
 
 group :production do
-  gem 'pg', '0.18.4'
+  gem 'pg',  '0.18.4'
+  gem 'fog', '1.42'
 end
 
 # Windows環境ではtzinfo-dataというgemを含める必要があります
