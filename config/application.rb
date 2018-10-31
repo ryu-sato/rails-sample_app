@@ -19,13 +19,17 @@ module RailsSampleApp
     config.action_view.embed_authenticity_token_in_remote_forms = true
 
     # Everyday Rails による推奨設定
+    # モデル generate 時に一部を除いてテストフレームワークを作成する
     # 
     # config.generators do |g|
     #   g.test_framework :rspec,
     #     fixtures: false,
     #     view_specs: false,
     #     helper_specs: false,
-    #     routing_specs: false
+    #     routing_specs: false,
+    #     request_specs: false
     # end
+
+    # 
   end
 end

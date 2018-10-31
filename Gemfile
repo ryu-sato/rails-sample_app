@@ -28,6 +28,7 @@ group :development, :test do
   gem 'sqlite3', '1.3.13'
   gem 'byebug',  '9.0.6', platform: :mri
   gem 'rspec-rails', '~> 3.6.0'
+  gem 'factory_bot_rails', '~> 4.10.0'
   gem 'spring-commands-rspec'
 end
 
