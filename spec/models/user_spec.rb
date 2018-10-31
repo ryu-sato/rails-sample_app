@@ -82,8 +82,8 @@ RSpec.describe User, type: :model do
   end
 
   it "should follow and unfollow a user" do
-    michael = FactoryBot.create(:user, name: :michael)
-    archer = FactoryBot.create(:user, name: :archer)
+    michael = FactoryBot.create(:user, name: 7)
+    archer = FactoryBot.create(:user, name: 'archer')
     expect(michael.following?(archer)).to be_falsy
     michael.follow(archer)
     expect(michael.following?(archer)).to be_truthy
@@ -93,9 +93,9 @@ RSpec.describe User, type: :model do
   end
 
   it "feed should have the right posts" do
-    michael = FactoryBot.create(:user, name: :michael)
-    archer = FactoryBot.create(:user, name: :archer)
-    lana = FactoryBot.create(:user, name: :lana)
+    michael = FactoryBot.create(:user, name: 'michael')
+    archer = FactoryBot.create(:user, name: 'archer')
+    lana = FactoryBot.create(:user, name: 'lana')
     # フォローしているユーザーの投稿を確認
     lana.microposts.each do |post_following|
       expect(michael.feed).to include(post_following)
