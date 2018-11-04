@@ -45,19 +45,18 @@ RSpec.feature "UsersLogin", type: :feature do
     expect(page).not_to have_xpath("//a[@href='#{user_path(user)}']")
   end
 
-  scenario "login with remembering" do
-    act_as(user, remember_me: true) do
-      expect(page.driver.cookies['remember_token']).not_to be_empty
+  scenario "login with remembering", driver: :selenium do
+    act_as(user, true) do
+      expect(page.driver.browser.manage.cookie_named('remember_token')).not_to be_empty
     end
   end
 
-  scenario "login without remembering" do
+  scenario "login without remembering", driver: :selenium do
     # クッキーを保存してログイン
-    act_as(user, remember_me: true) do
-    end
+    log_in_as(user, true)
+    log_out
     # クッキーを削除してログイン
-    act_as(user, remember_me: false) do
-      expect(page.driver.cookies['remember_token']).to be_empty
-    end
+    log_in_as(user, false)
+    expect(page.driver.browser.manage.cookie_named('remember_token')).to be_nil
   end
 end

@@ -94,9 +94,3 @@ RSpec.configure do |config|
   Kernel.srand config.seed
 =end
 end
-
-# additional requirements
-require 'capybara/rspec'
-
-# [TODO] 設定を正しく行い、users_login_spec.rb でセッションが読めるようにする
-Capybara.javascript_driver = :webkit

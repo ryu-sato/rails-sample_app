@@ -5,7 +5,7 @@ module FeatureLoginHelper
     within('#session') do
       fill_in 'session_email', with: user.email
       fill_in 'session_password', with: user.password
-      if remember_me
+      if remember_me == true
         check 'session_remember_me'
       else
         uncheck 'session_remember_me'
@@ -16,6 +16,8 @@ module FeatureLoginHelper
 
   # ログオフする
   def log_out
+    # JSモードをONにするとvisibleでないリンクをクリックできないためドロップダウンしてリンクを表示する
+    click_link 'Account'
     click_link 'Log out'
   end
 
