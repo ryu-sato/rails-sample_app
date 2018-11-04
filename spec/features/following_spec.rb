@@ -23,7 +23,7 @@ RSpec.feature "Following", type: :feature do
     click_button 'Log in'
   end
 
-  it "following page" do
+  scenario "following page" do
     visit following_user_path(user)
     expect(user.following).not_to be_empty
     expect(page).to have_content(user.following.count.to_s)
@@ -32,7 +32,7 @@ RSpec.feature "Following", type: :feature do
     end
   end
 
-  it "followers page" do
+  scenario "followers page" do
     visit followers_user_path(user)
     expect(user.followers).not_to be_empty
     expect(page).to have_content(user.followers.count.to_s)
@@ -77,7 +77,7 @@ RSpec.feature "Following", type: :feature do
     end
   end
 
-  it "feed on Home page" do
+  scenario "feed on Home page" do
     visit root_path
     expect(page).to have_content(user.following.count.to_s)
     expect(page).to have_content(user.followers.count.to_s)

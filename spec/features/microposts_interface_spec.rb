@@ -18,7 +18,7 @@ RSpec.feature "MicropostsInterface", type: :feature do
     end
   end
 
-  it "micropost interface" do
+  scenario "micropost interface" do
     act_as(user) do
       visit root_path
       expect(page).to have_xpath("//div[@class='pagination']")
@@ -58,7 +58,7 @@ RSpec.feature "MicropostsInterface", type: :feature do
     end
   end
 
-  it "micropost sidebar count" do
+  scenario "micropost sidebar count" do
     act_as(user) do
       visit root_path
       count_of_microposts = "#{user.microposts.size} microposts"
