@@ -94,3 +94,6 @@ RSpec.configure do |config|
   Kernel.srand config.seed
 =end
 end
+
+# additional requirements
+require 'capybara/rspec'
