@@ -61,6 +61,9 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
+    capybara-webkit (1.15.1)
+      capybara (>= 2.3, < 4.0)
+      json
     carrierwave (1.2.2)
       activemodel (>= 4.0.0)
       activesupport (>= 4.0.0)
@@ -447,6 +450,7 @@ DEPENDENCIES
   bootstrap-will_paginate
   byebug (= 9.0.6)
   capybara (~> 2.8.0)
+  capybara-webkit
   carrierwave (= 1.2.2)
   coffee-rails (= 4.2.2)
   factory_bot_rails (~> 4.10.0)
