@@ -14,7 +14,7 @@ server "localhost",
     auth_methods: %w(publickey)
   }
 
-set :default_environment, {
+set :default_env, {
   "S3_REGION"         => ENV['S3_REGION'],     # 例: 'ap-northeast-1'
   "S3_ACCESS_KEY"     => ENV['S3_ACCESS_KEY'],
   "S3_SECRET_KEY"     => ENV['S3_SECRET_KEY'],

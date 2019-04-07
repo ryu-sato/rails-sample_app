@@ -42,8 +42,6 @@ set :format, :pretty
 # Uncomment the following to require manually verifying the host key before first deploy.
 # set :ssh_options, verify_host_key: :secure
 
-set :scm, :git
-
 # Rails
 set :rails_env, 'production'
 
