@@ -47,3 +47,4 @@ set :rails_env, 'production'
 # rbenv
 set :rbenv_type, :system
 set :rbenv_ruby, File.read('.ruby-version').strip
+set :rbenv_custom_path, '/home/vagrant/.rbenv/'
