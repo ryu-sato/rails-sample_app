@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'rails',                   '5.2.3'
 gem 'bootstrap-sass',          '~> 3.4.1'
+gem 'puma',                    '3.9.1'
 gem 'sass-rails',              '>= 5.0.5'
 gem 'uglifier',                '3.2.0'
 gem 'coffee-rails',            '4.2.2'
@@ -64,4 +65,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'sqlite3', '1.3.13'
 
 # use passenger (https://github.com/phusion/passenger/)
-gem "passenger", ">= 5.0.25", require: "phusion_passenger/rack_handler"
+# gem "passenger", ">= 5.0.25", require: "phusion_passenger/rack_handler"
