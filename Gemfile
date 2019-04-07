@@ -54,9 +54,9 @@ end
 
 group :deployment do
   gem 'capistrano', '~> 3.9', require: false
-  gem 'capistrano-rails'
-  gem 'capistrano-bundler'
-  gem 'capistrano-rbenv', '~> 2.1'
+  gem 'capistrano-rails', require: false
+  gem 'capistrano-bundler', require: false
+  gem 'capistrano-rbenv', '~> 2.1', require: false
 end
 
 # Windows環境ではtzinfo-dataというgemを含める必要があります

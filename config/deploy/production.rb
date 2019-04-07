@@ -11,7 +11,7 @@ server "localhost",
   roles: %w{app db web},
   ssh_options: {
     forward_agent: true,
-    auth_method: %w(publickey)
+    auth_methods: %w(publickey)
   }
   
 # role-based syntax
