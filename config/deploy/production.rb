@@ -13,7 +13,16 @@ server "localhost",
     forward_agent: true,
     auth_methods: %w(publickey)
   }
-  
+
+set :default_environment, {
+  "S3_REGION"         => ENV['S3_REGION'],     # 例: 'ap-northeast-1'
+  "S3_ACCESS_KEY"     => ENV['S3_ACCESS_KEY'],
+  "S3_SECRET_KEY"     => ENV['S3_SECRET_KEY'],
+  "S3_BUCKET"         => ENV['S3_BUCKET'],
+  "SENDGRID_USERNAME" => ENV['SENDGRID_USERNAME'],
+  "SENDGRID_PASSWORD" => ENV['SENDGRID_PASSWORD']
+}
+
 # role-based syntax
 # ==================
 
