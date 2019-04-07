@@ -54,7 +54,7 @@ end
 
 group :deployment do
   gem 'capistrano', '~> 3.9', require: false
-  gem 'capistrano-rails', require: false
+  gem 'capistrano-rails', '>= 1.1.3', require: false
   gem 'capistrano-bundler', require: false
   gem 'capistrano-rbenv', '~> 2.1', require: false
 end
