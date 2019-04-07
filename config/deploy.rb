@@ -49,3 +49,6 @@ set :rails_env, 'production'
 set :rbenv_type, :system
 set :rbenv_ruby, File.read('.ruby-version').strip
 set :rbenv_custom_path, '/home/vagrant/.rbenv/'
+
+# passenger
+set :passenger_in_gemfile, true
