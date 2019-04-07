@@ -24,7 +24,6 @@ gem 'will_paginate'
 gem 'bootstrap-will_paginate'
 
 group :development, :test do
-  gem 'sqlite3', '1.3.13'
   gem 'byebug',  '9.0.6', platform: :mri
   gem 'rspec-rails', '~> 3.6.0'
   gem 'factory_bot_rails', '~> 4.10.0'
@@ -49,7 +48,6 @@ end
 
 group :production do
   # gem 'pg',  '0.18.4'
-  gem 'sqlite3', '1.3.13'
   gem 'fog', '1.42'
 end
 
@@ -62,6 +60,8 @@ end
 
 # Windows環境ではtzinfo-dataというgemを含める必要があります
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+gem 'sqlite3', '1.3.13'
 
 # use passenger (https://github.com/phusion/passenger/)
 gem "passenger", ">= 5.0.25", require: "phusion_passenger/rack_handler"
