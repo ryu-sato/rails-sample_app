@@ -56,6 +56,7 @@ group :deployment do
   gem 'capistrano-rails', '>= 1.1.3', require: false
   gem 'capistrano-bundler', require: false
   gem 'capistrano-rbenv', '~> 2.1', require: false
+  gem 'capistrano-passenger', require: false
 end
 
 # Windows環境ではtzinfo-dataというgemを含める必要があります
