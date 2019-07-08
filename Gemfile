@@ -76,7 +76,7 @@ group :test do
   # Extracting `assigns` and `assert_template` from ActionDispatch. (https://github.com/rails/rails-controller-testing)
   gem 'rails-controller-testing', '1.0.2'
   # Create customizable Minitest output formats (https://github.com/CapnKernul/minitest-reporters)
-  gem 'minitest-reporters',       '1.1.14'
+  gem 'minitest-reporters',       '1.3.6'
   # Guard keeps an eye on your file modifications (http://guardgem.org)
   gem 'guard',                    '2.13.0'
   # Guard plugin for the Minitest framework (https://rubygems.org/gems/guard-minitest)
