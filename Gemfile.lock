@@ -45,10 +45,17 @@ GEM
       tzinfo (~> 1.1)
     addressable (2.6.0)
       public_suffix (>= 2.0.2, < 4.0)
+    annotate (2.7.5)
+      activerecord (>= 3.2, < 7.0)
+      rake (>= 10.4, < 13.0)
+    annotate_gem (0.0.13)
+      bundler (~> 1.1)
     ansi (1.5.0)
     arel (9.0.0)
+    ast (2.4.0)
     autoprefixer-rails (9.5.0)
       execjs
+    backport (1.1.1)
     bcrypt (3.1.11)
     bindex (0.6.0)
     bootstrap-sass (3.4.1)
@@ -268,11 +275,13 @@ GEM
     guard-minitest (2.4.4)
       guard-compat (~> 1.2)
       minitest (>= 3.0)
+    htmlentities (4.3.4)
     http-cookie (1.0.3)
       domain_name (~> 0.5)
     i18n (0.9.5)
       concurrent-ruby (~> 1.0)
     ipaddress (0.8.3)
+    jaro_winkler (1.5.3)
     jbuilder (2.7.0)
       activesupport (>= 4.2.0)
       multi_json (>= 1.2)
@@ -281,6 +290,7 @@ GEM
       railties (>= 4.2.0)
       thor (>= 0.14, < 2.0)
     json (2.2.0)
+    kramdown (1.17.0)
     libv8 (3.16.14.19)
     listen (3.0.8)
       rb-fsevent (~> 0.9, >= 0.9.4)
@@ -319,6 +329,9 @@ GEM
     optimist (3.0.0)
     ovirt-engine-sdk (4.3.0)
       json (>= 1, < 3)
+    parallel (1.17.0)
+    parser (2.6.3.0)
+      ast (~> 2.4.0)
     pg (0.18.4)
     pry (0.12.2)
       coderay (~> 1.1.0)
@@ -356,6 +369,7 @@ GEM
       method_source
       rake (>= 0.8.7)
       thor (>= 0.19.0, < 2.0)
+    rainbow (3.0.0)
     rake (12.3.2)
     rb-fsevent (0.10.3)
     rb-inotify (0.10.0)
@@ -373,6 +387,8 @@ GEM
       http-cookie (>= 1.0.2, < 2.0)
       mime-types (>= 1.16, < 4.0)
       netrc (~> 0.8)
+    reverse_markdown (1.1.0)
+      nokogiri
     rspec-core (3.6.0)
       rspec-support (~> 3.6.0)
     rspec-expectations (3.6.0)
@@ -390,6 +406,13 @@ GEM
       rspec-mocks (~> 3.6.0)
       rspec-support (~> 3.6.0)
     rspec-support (3.6.0)
+    rubocop (0.72.0)
+      jaro_winkler (~> 1.5.1)
+      parallel (~> 1.10)
+      parser (>= 2.6)
+      rainbow (>= 2.2.2, < 4.0)
+      ruby-progressbar (~> 1.7)
+      unicode-display_width (>= 1.4.0, < 1.7)
     ruby-progressbar (1.10.0)
     rubyzip (1.2.2)
     sass (3.7.4)
@@ -410,6 +433,18 @@ GEM
       childprocess (~> 0.5)
       rubyzip (~> 1.2, >= 1.2.2)
     shellany (0.0.1)
+    solargraph (0.34.2)
+      backport (~> 1.1)
+      bundler (>= 1.17.2)
+      htmlentities (~> 4.3, >= 4.3.4)
+      jaro_winkler (~> 1.5)
+      kramdown (~> 1.16)
+      parser (~> 2.3)
+      reverse_markdown (~> 1.0, >= 1.0.5)
+      rubocop (~> 0.52)
+      thor (~> 0.19, >= 0.19.4)
+      tilt (~> 2.0)
+      yard (~> 0.9)
     spring (2.0.2)
       activesupport (>= 4.2)
     spring-commands-rspec (1.0.4)
@@ -441,6 +476,7 @@ GEM
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.7.5)
+    unicode-display_width (1.6.0)
     web-console (3.5.1)
       actionview (>= 5.0)
       activemodel (>= 5.0)
@@ -454,11 +490,14 @@ GEM
     xmlrpc (0.3.0)
     xpath (2.1.0)
       nokogiri (~> 1.3)
+    yard (0.9.20)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  annotate
+  annotate_gem
   bcrypt (= 3.1.11)
   bootstrap-sass (~> 3.4.1)
   bootstrap-will_paginate
@@ -483,6 +522,7 @@ DEPENDENCIES
   rspec-rails (~> 3.6.0)
   sass-rails (>= 5.0.5)
   selenium-webdriver
+  solargraph
   spring (= 2.0.2)
   spring-commands-rspec
   spring-watcher-listen (= 2.0.1)

@@ -1,20 +1,20 @@
 require 'rails_helper'
 
-RSpec.describe UsersController, type: :controller do
-  include LoginHelper
+RSpec.describe "Users", type: :request do
+  include RequestLoginHelper
 
   let!(:user)       { FactoryBot.create(:user, name: 'michael') }
   let!(:other_user) { FactoryBot.create(:user, name: 'archer') }
 
   it "should get new" do
-    get :new
-    expect(response.status).to eq(200)
+    get new_user_path
+    expect(response).to have_http_status(200)
   end
 
   context "when logged in" do
     context "if request to edit other use" do
       before { log_in_as(other_user) }
-      subject { get :edit, params: { id: user.id } }
+      subject { get edit_user_path(user) }
 
       it "should redirect to root" do
         expect(flash[:success]).to be_nil
@@ -24,8 +24,8 @@ RSpec.describe UsersController, type: :controller do
 
     context "if request to update other user" do
       before { log_in_as(other_user) }
-      subject { patch :update, params: { id: user.id, user: { name: user.name,
-                                                              email: user.email } } }
+      subject { patch user_path(user), params: { user: { name: user.name,
+                                                         email: user.email } } }
 
       it "should redirect to root" do
         expect(flash[:success]).to be_nil
@@ -36,7 +36,7 @@ RSpec.describe UsersController, type: :controller do
 
   context "when not logged in" do
     context "if request to index" do
-      before { get :index }
+      before { get users_path }
 
       it "should redirect index" do
         is_expected.to redirect_to(login_url)
@@ -44,7 +44,7 @@ RSpec.describe UsersController, type: :controller do
     end
 
     context "if request delete" do
-      subject { delete :destroy, params: { id: user.id } }
+      subject { delete user_path(user) }
 
       it 'cannot delete and redirect to login page' do
         # change マッチャを使うためブロック文にする必要がある
@@ -54,14 +54,16 @@ RSpec.describe UsersController, type: :controller do
     end
 
     context "if request following" do
-      subject { get :following, params: { id: user.id } }
+      subject { get following_user_path(user) }
+
       it "should redirect to login page" do
         is_expected.to redirect_to(login_url)
       end
     end
 
     context "if request followers" do
-      subject { get :followers, params: { id: user.id } }
+      subject { get followers_user_path(user) }
+
       it "should redirect to login page" do
         is_expected.to redirect_to(login_url)
       end
@@ -71,10 +73,9 @@ RSpec.describe UsersController, type: :controller do
   it "should not allow the admin attribute to be edited via the web" do
     log_in_as(other_user)
     expect(other_user.admin?).to be_falsey
-    patch :update, params: { id: other_user.id,
-                             user: { password:              '',
-                                     password_confirmation: '',
-                                     admin: true } }
+    patch user_path(other_user), params: { user: { password:              '',
+                                                   password_confirmation: '',
+                                                   admin: true } }
     expect(other_user.admin?).to be_falsey
   end
 
@@ -82,7 +83,7 @@ RSpec.describe UsersController, type: :controller do
     before { log_in_as(other_user) }
 
     context "if request to destroy" do
-      subject { delete :destroy, params: { id: user.id } }
+      subject { delete user_path(user) }
 
       it 'should redirect to root' do
         # change マッチャを使うためブロック文にする必要がある
