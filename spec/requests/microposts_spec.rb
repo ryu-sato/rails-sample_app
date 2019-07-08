@@ -8,7 +8,7 @@ RSpec.describe "Microposts", type: :request do
       it "should redirect create" do
         expect(-> {
           post microposts_path, params: { micropost: { content: 'Lorem ipsum' }}
-        }).to change { Micropost.count }.by(0) & redirect_to(login_url)
+        }).to change { Micropost.count }.by(0).and redirect_to(login_url)
       end
     end
   end
