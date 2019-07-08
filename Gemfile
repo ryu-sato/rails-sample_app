@@ -89,7 +89,7 @@ end
 
 group :production do
   # Pg is the Ruby interface to the {PostgreSQL RDBMS}[http://www.postgresql.org/] (https://bitbucket.org/ged/ruby-pg)
-  gem 'pg',  '0.18.4'
+  gem 'pg',  '1.1.4'
   # brings clouds to you (http://github.com/fog/fog)
   gem 'fog', '1.42'
 end
