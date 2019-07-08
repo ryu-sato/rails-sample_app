@@ -82,7 +82,7 @@ group :test do
   # Guard plugin for the Minitest framework (https://rubygems.org/gems/guard-minitest)
   gem 'guard-minitest',           '2.4.4'
   # Capybara aims to simplify the process of integration testing Rack applications, such as Rails, Sinatra or Merb (https://github.com/jnicklas/capybara)
-  gem 'capybara',                 '~> 2.8.0'
+  gem 'capybara',                 '~> 3.25.0'
   # The next generation developer focused tool for automated testing of webapps (https://github.com/SeleniumHQ/selenium)
   gem 'selenium-webdriver'
 end
