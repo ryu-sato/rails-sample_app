@@ -5,7 +5,7 @@ gem 'rails',                   '5.2.3'
 # bootstrap-sass is a Sass-powered version of Bootstrap 3, ready to drop right into your Sass powered applications. (https://github.com/twbs/bootstrap-sass)
 gem 'bootstrap-sass',          '~> 3.4.1'
 # Puma is a simple, fast, threaded, and highly concurrent HTTP 1.1 server for Ruby/Rack applications (http://puma.io)
-gem 'puma',                    '3.9.1'
+gem 'puma',                    '4.0.0'
 # Sass adapter for the Rails asset pipeline. (https://github.com/rails/sass-rails)
 gem 'sass-rails',              '>= 5.0.5'
 # Ruby wrapper for UglifyJS JavaScript compressor (http://github.com/lautis/uglifier)
