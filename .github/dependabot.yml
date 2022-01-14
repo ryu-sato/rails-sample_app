@@ -30,3 +30,7 @@ updates:
   - dependency-name: solargraph
     versions:
     - "> 0.34.3"
+  # コメント
+  - dependency-name: selenium-webdriver
+    versions:
+    - "0.3"
