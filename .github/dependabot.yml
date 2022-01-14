@@ -26,3 +26,7 @@ updates:
   - dependency-name: loofah
     versions:
     - 2.9.0
+  # コメント
+  - dependency-name: solargraph
+    versions:
+    - "> 0.34.3"
