@@ -34,6 +34,7 @@ updates:
   - dependency-name: selenium-webdriver
     versions:
     - "0.3"
+  # has security vulnerability
   - dependency-name: addressable
     versions:
     - "> 2.6.0"
