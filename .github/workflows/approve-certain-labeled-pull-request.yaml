@@ -1,4 +1,4 @@
-name: Approve "approve" labeled pull request
+name: Approve "approved by bot" labeled pull request
 on:
   pull_request:
     types:
@@ -6,9 +6,9 @@ on:
 jobs:
   approve-certain-labeled-pull-request:
     runs-on: ubuntu-latest
-    if: github.event.label.name == 'approve'
+    if: github.event.label.name == 'approved by bot'
     steps:
       - name: Approve pull request
-        run: gh pr review --approve -b "'approve' is labeled" ${{ github.event.pull_request.html_url }}
+        run: gh pr review --approve -b "'approved by bot' is labeled" ${{ github.event.pull_request.html_url }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
