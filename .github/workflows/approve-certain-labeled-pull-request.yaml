@@ -9,6 +9,6 @@ jobs:
     if: github.event.label.name == 'approve'
     steps:
       - name: Approve pull request
-        run: gh pr review --approve --comment -b "'approve' is labeled" ${{ github.event.pull_request.html_url }}
+        run: gh pr review --approve -b "'approve' is labeled" ${{ github.event.pull_request.html_url }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
