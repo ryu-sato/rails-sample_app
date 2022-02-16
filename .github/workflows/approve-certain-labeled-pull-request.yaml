@@ -9,6 +9,6 @@ jobs:
     if: github.event.label.name == 'approved by bot'
     steps:
       - name: Approve pull request
-        run: gh pr review --approve -b "'approved by bot' is labeled" ${{ github.event.pull_request.html_url }}
+        run: gh pr review --approve -b "'${{ github.event.label.name }}' is labeled" ${{ github.event.pull_request.html_url }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
