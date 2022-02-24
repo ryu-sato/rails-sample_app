@@ -1,13 +1,13 @@
 on:
-  push:
-    branches-ignore:
-    - 'master'
+  check_suite:
+    types:
+    - completed
 name: Keep branch updated
 jobs:
   updateBranch:
     if:
       (contains(github.event.pull_request.labels.*.name, 'dependencies')
-        || contains(github.event.pull_request.labels.*.name, 'keep updated'))
+        || contains(github.event.pull_request.labels.*.name, 'keep branch updated'))
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
