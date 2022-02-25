@@ -5,9 +5,7 @@ on:
 name: Keep branch updated
 jobs:
   updateBranch:
-    if:
-      (contains(github.event.pull_request.labels.*.name, 'dependencies')
-        || contains(github.event.pull_request.labels.*.name, 'keep branch up-to-date'))
+    if: contains(github.event.pull_request.labels.*.name, 'keep branch up-to-date')
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
