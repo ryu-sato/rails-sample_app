@@ -1,15 +1,33 @@
-name: Keep branch updated
 on:
-  push:
-    branches:
-    - master
+  check_suite:
+    types:
+    - completed
+name: Keep branch updated
 jobs:
-  update-branch:
-    name: autoupdate
-    runs-on: ubuntu-20.04
+  updateBranch:
+    if:
+      (contains(github.event.pull_request.labels.*.name, 'dependencies')
+        || contains(github.event.pull_request.labels.*.name, 'keep branch up-to-date'))
+    runs-on: ubuntu-latest
     steps:
-      - uses: docker://chinthakagodawita/autoupdate-action:v1
-        env:
-          GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
-          PR_FILTER: labelled
-          PR_LABELS: "keep branch up-to-date"
+    - uses: actions/checkout@master
+    - name: Update branch
+      uses: Embraser01/update-git-branch-action@v1.0.0
+      with:
+        branch: ${{ github.ref_name }}
+        githubToken: ${{ secrets.GITHUB_TOKEN }}
+#name: Keep branch updated
+#on:
+#  push:
+#    branches:
+#    - master
+#jobs:
+#  update-branch:
+#    name: autoupdate
+#    runs-on: ubuntu-20.04
+#    steps:
+#      - uses: docker://chinthakagodawita/autoupdate-action:v1
+#        env:
+#          GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
+#          PR_FILTER: labelled
+#          PR_LABELS: "keep branch up-to-date"
