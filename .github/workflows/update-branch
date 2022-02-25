@@ -1,7 +1,4 @@
-on:
-  check_suite:
-    types:
-    - completed
+on: check_suite
 name: Keep branch updated
 jobs:
   updateBranch:
