@@ -2,7 +2,8 @@ name: Approve pull request which update dependencies
 on:
   pull_request:
     types:
-      - "labeled"
+    - labeled
+    - synchronize
 jobs:
   approve-pull-request-which-update-dependencies:
     runs-on: ubuntu-latest
