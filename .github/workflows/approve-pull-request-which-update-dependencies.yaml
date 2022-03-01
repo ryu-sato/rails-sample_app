@@ -2,24 +2,7 @@ name: Approve pull request which update dependencies
 on:
   pull_request:
     types:
-    - labeled
-    - assigned
-    - unassigned
-    - labeled
-    - unlabeled
-    - opened
-    - edited
-    - closed
-    - reopened
     - synchronize
-    - converted_to_draft
-    - ready_for_review
-    - locked
-    - unlocked
-    - review_requested
-    - review_request_removed
-    - auto_merge_enabled
-    - auto_merge_disabled
 jobs:
   approve-pull-request-which-update-dependencies:
     runs-on: ubuntu-latest
