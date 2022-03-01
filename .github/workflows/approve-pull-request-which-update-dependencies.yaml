@@ -1,6 +1,6 @@
 name: Approve pull request which update dependencies
 on:
-  pull_request:
+  - pull_request
 jobs:
   approve-pull-request-which-update-dependencies:
     runs-on: ubuntu-latest
