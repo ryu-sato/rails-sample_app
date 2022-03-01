@@ -4,12 +4,13 @@ on:
     types:
     - labeled
     - unlabeled
-    - synchronize
+  push:
 jobs:
   approve-pull-request-which-update-dependencies:
     runs-on: ubuntu-latest
     if:
-      contains(github.event.pull_request.labels.*.name, 'dependencies')
+      github.head_ref != ''
+      && contains(github.event.pull_request.labels.*.name, 'dependencies')
       && contains(github.event.pull_request.labels.*.name, 'approved by bot')
     steps:
       - name: Approve pull request
