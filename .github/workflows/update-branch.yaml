@@ -2,7 +2,8 @@ name: Keep branch updated
 on:
   push:
     branches:
-    - master
+    #- master
+    - unknown
 jobs:
   update-branch:
     name: autoupdate
