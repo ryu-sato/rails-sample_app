@@ -1,8 +1,16 @@
+
+# dependencies を更新するための PullRequest (※1) を承認する
+#
+# ※1 対象となる PullRequest は Dependabot が作成したもの、または、開発者が作成して "dependencies", "approved by bot" ラベルを付与したもの
 name: Approve pull request which update dependencies
 on:
   pull_request:
     types:
+    # ラベルが更新されたときの内、"dependencies", "approved by bot" が初めて揃う場合を検知するためのイベント
+    # ex. "dependencies" ラベルのみ -> "dependencies", "approved by bot" ラベルの 2 つが付与された状態への遷移
     - labeled
+    # Approve 後に Source branch が更新された場合を検知するためのイベント
+    # Branch protection rule にて Require a pull request before merging / Dismiss stale pull request approvals when new commits are pushed を設定しているために処理する必要がある
     - synchronize
 jobs:
   approve-pull-request-which-update-dependencies:
@@ -11,7 +19,7 @@ jobs:
       contains(github.event.pull_request.labels.*.name, 'dependencies')
       && contains(github.event.pull_request.labels.*.name, 'approved by bot')
     steps:
-      - name: Approve pull request
-        run: gh pr review --approve -b "Because it is a pull request which update dependences" ${{ github.event.pull_request.html_url }}
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - name: Approve pull request
+      run: gh pr review --approve -b "Because it is a pull request which update dependences" ${{ github.event.pull_request.html_url }}
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
