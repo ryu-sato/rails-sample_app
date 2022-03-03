@@ -9,8 +9,15 @@ jobs:
     name: autoupdate
     runs-on: ubuntu-20.04
     steps:
+      - name: Generate github token
+        id: generate_token
+        uses: tibdex/github-app-token@v1
+        with:
+          app_id: ${{ secrets.DEPENDABOT_KEEP_UP_TO_DATE_APP_ID }}
+          private_key: ${{ secrets.DEPENDABOT_KEEP_UP_TO_DATE_PRIVATE_KEY }}
+
       - uses: docker://chinthakagodawita/autoupdate-action:v1
         env:
-          GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
+          GITHUB_TOKEN: ${{ steps.generate_token.outputs.token }}
           PR_FILTER: labelled
           PR_LABELS: "keep branch up-to-date"
