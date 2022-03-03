@@ -14,8 +14,8 @@ jobs:
         id: generate_token
         uses: tibdex/github-app-token@v1
         with:
-          app_id: ${{ secrets.DEPENDABOT_AUTO_MERGE_APP_ID }}
-          private_key: ${{ secrets.DEPENDABOT_AUTO_MERGE_PRIVATE_KEY }}
+          app_id: ${{ secrets.DEPENDABOT_KEEP_UP_TO_DATE_APP_ID }}
+          private_key: ${{ secrets.DEPENDABOT_KEEP_UP_TO_DATE_PRIVATE_KEY }}
 
       - name: Approve pull request
         run: gh pr review --approve -b "Because it is a pull request which update dependences" ${{ github.event.pull_request.html_url }}
