@@ -1,4 +1,9 @@
-name: Keep branch updated
+# master を target とする PullRequest を最新の状態で維持する
+# 最新の状態で維持させたい場合は PullRequest に "keep branch up-to-date" ラベルを付与しておく
+name: Keep branch up-to-date
+# PullRequest に起因するイベントでは target branch が更新されたことを知る方法がないので、
+# target branch は master であることを前提にして、master ブランチが更新されたことをトリガーとして、
+# 各 PullRequest の source branch を更新する
 on:
   push:
     branches:
@@ -8,15 +13,16 @@ jobs:
     name: autoupdate
     runs-on: ubuntu-20.04
     steps:
-      - name: Generate github token
-        id: generate_token
-        uses: tibdex/github-app-token@v1
-        with:
-          app_id: ${{ secrets.DEPENDABOT_KEEP_UP_TO_DATE_APP_ID }}
-          private_key: ${{ secrets.DEPENDABOT_KEEP_UP_TO_DATE_PRIVATE_KEY }}
-
-      - uses: docker://chinthakagodawita/autoupdate-action:v1
-        env:
-          GITHUB_TOKEN: ${{ steps.generate_token.outputs.token }}
-          PR_FILTER: labelled
-          PR_LABELS: "keep branch up-to-date"
+    # 別の workflow がイベントを検知できるように GITHUB_TOKEN を発行
+    # see. https://docs.github.com/en/actions/security-guides/automatic-token-authentication#using-the-github_token-in-a-workflow
+    - name: Generate github token
+      id: generate_token
+      uses: tibdex/github-app-token@v1
+      with:
+        app_id: ${{ secrets.KEEP_UP_TO_DATE_APP_ID }}
+        private_key: ${{ secrets.KEEP_UP_TO_DATE_PRIVATE_KEY }}
+    - uses: docker://chinthakagodawita/autoupdate-action:v1
+      env:
+        GITHUB_TOKEN: ${{ steps.generate_token.outputs.token }}
+        PR_FILTER: labelled
+        PR_LABELS: "keep branch up-to-date"
