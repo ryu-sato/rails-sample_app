@@ -6,36 +6,5 @@ updates:
     interval: weekly
     timezone: Asia/Tokyo
   open-pull-requests-limit: 10
-  rebase-strategy: "auto"
+  rebase-strategy: disabled
   versioning-strategy: lockfile-only
-  ignore:
-  - dependency-name: puma
-    versions:
-    - ">= 4.a, < 5"
-  - dependency-name: nokogiri
-    versions:
-    - 1.11.1
-    - 1.11.2
-  - dependency-name: solargraph
-    versions:
-    - 0.40.2
-    - 0.40.3
-  - dependency-name: excon
-    versions:
-    - 0.78.1
-    - 0.79.0
-  - dependency-name: loofah
-    versions:
-    - 2.9.0
-  # コメント
-  - dependency-name: solargraph
-    versions:
-    - "> 0.34.3"
-  # コメント
-  - dependency-name: selenium-webdriver
-    versions:
-    - "0.3"
-  # has security vulnerability
-  - dependency-name: addressable
-    versions:
-    - "> 2.6.0"
