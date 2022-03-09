@@ -1,0 +1,29 @@
+name: Dependabot auto-merge
+
+on: pull_request_target
+
+jobs:
+  dependabot:
+    runs-on: ubuntu-latest
+    if: ${{ github.actor == 'dependabot[bot]' }}
+    steps:
+      - name: Generate github token
+        id: generate_token
+        uses: tibdex/github-app-token@v1
+        with:
+          app_id: ${{ secrets.DEPENDABOT_AUTO_MERGE_APP_ID }}
+          private_key: ${{ secrets.DEPENDABOT_AUTO_MERGE_PRIVATE_KEY }}
+
+      - name: Dependabot metadata
+        id: metadata
+        uses: dependabot/fetch-metadata@v1.1.1
+        with:
+          github-token: "${{ steps.generate_token.outputs.token }}"
+
+      - uses: actions/checkout@v2
+
+      - name: Enable auto-merge for Dependabot PRs
+        run: .github/scripts/merge-dependabot-pull-request.rb "${{ steps.metadata.outputs.dependency-names }}"
+        env:
+          PR_URL: ${{ github.event.pull_request.html_url }}
+          GITHUB_TOKEN: ${{ steps.generate_token.outputs.token }}
