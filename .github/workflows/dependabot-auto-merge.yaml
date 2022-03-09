@@ -5,9 +5,8 @@ on: pull_request_target
 jobs:
   dependabot:
     runs-on: ubuntu-latest
-    # if: ${{ github.event.pull_request.user.login == 'dependabot[bot]' }}
+    if: ${{ github.event.pull_request.user.login == 'dependabot[bot]' }}
     steps:
-      - run: echo ${{ github.event.pull_request.user.login }}
       - name: Generate github token
         id: generate_token
         uses: tibdex/github-app-token@v1
