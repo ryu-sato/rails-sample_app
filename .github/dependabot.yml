@@ -8,3 +8,11 @@ updates:
   open-pull-requests-limit: 10
   rebase-strategy: disabled
   versioning-strategy: lockfile-only
+- package-ecosystem: bundler
+  directory: "/"
+  schedule:
+    interval: daily
+    timezone: Asia/Tokyo
+  open-pull-requests-limit: 10
+  rebase-strategy: disabled
+  versioning-strategy: increase
