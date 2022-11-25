@@ -5,14 +5,53 @@ updates:
   schedule:
     interval: daily
     timezone: Asia/Tokyo
-  open-pull-requests-limit: 10
   rebase-strategy: disabled
   versioning-strategy: lockfile-only
+  labels:
+  - "gem"
+  - "dependencies"
+  - "lockfile-only"
 - package-ecosystem: bundler
   directory: "/"
   schedule:
     interval: daily
     timezone: Asia/Tokyo
-  open-pull-requests-limit: 10
   rebase-strategy: disabled
   versioning-strategy: increase
+  labels:
+  - "gem"
+  - "dependencies"
+  - "increase"
+- package-ecosystem: bundler
+  directory: "/"
+  schedule:
+    interval: daily
+    timezone: Asia/Tokyo
+  rebase-strategy: disabled
+  versioning-strategy: increase-if-necessary
+  labels:
+  - "gem"
+  - "dependencies"
+  - "increase-if-necessary"
+- package-ecosystem: bundler
+  directory: "/"
+  schedule:
+    interval: daily
+    timezone: Asia/Tokyo
+  rebase-strategy: disabled
+  versioning-strategy: increase-if-necessary
+  labels:
+  - "gem"
+  - "dependencies"
+  - "increase-if-necessary"
+- package-ecosystem: bundler
+  directory: "/"
+  schedule:
+    interval: daily
+    timezone: Asia/Tokyo
+  rebase-strategy: disabled
+  versioning-strategy: auto
+  labels:
+  - "gem"
+  - "dependencies"
+  - "auto"
