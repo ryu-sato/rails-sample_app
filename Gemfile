@@ -32,7 +32,7 @@ gem 'faker',                   '1.7.3'
 # Ruby file upload library (https://github.com/carrierwaveuploader/carrierwave)
 gem 'carrierwave',             '1.2.2'
 # Manipulate images with minimal use of memory via ImageMagick / GraphicsMagick (https://github.com/minimagick/minimagick)
-gem 'mini_magick',             '4.7.0'
+gem 'mini_magick',             '4.11.0'
 
 # ページネーション用
 # Pagination plugin for web frameworks and other apps (https://github.com/mislav/will_paginate/wiki)
