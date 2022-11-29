@@ -13,7 +13,7 @@ gem 'uglifier',                '4.2.0'
 # CoffeeScript adapter for the Rails asset pipeline. (https://github.com/rails/coffee-rails)
 gem 'coffee-rails',            '5.0.0'
 # Use jQuery with Rails 4+ (https://github.com/rails/jquery-rails)
-gem 'jquery-rails',            '4.3.1'
+gem 'jquery-rails',            '4.5.1'
 # Turbolinks makes navigating your web application faster (https://github.com/turbolinks/turbolinks)
 gem 'turbolinks',              '5.0.1'
 # Create JSON structures via a Builder-style DSL (https://github.com/rails/jbuilder)
@@ -55,7 +55,7 @@ end
 
 group :development do
   # A debugging tool for your Ruby on Rails applications. (https://github.com/rails/web-console)
-  gem 'web-console',           '3.5.1'
+  gem 'web-console',           '3.7.0'
   # Listen to file modifications (https://github.com/guard/listen)
   gem 'listen',                '3.7.1'
   # Rails application preloader (https://github.com/rails/spring)
@@ -78,7 +78,7 @@ group :test do
   # Create customizable Minitest output formats (https://github.com/CapnKernul/minitest-reporters)
   gem 'minitest-reporters',       '1.3.6'
   # Guard keeps an eye on your file modifications (http://guardgem.org)
-  gem 'guard',                    '2.15.0'
+  gem 'guard',                    '2.18.0'
   # Guard plugin for the Minitest framework (https://rubygems.org/gems/guard-minitest)
   gem 'guard-minitest',           '2.4.4'
   # Capybara aims to simplify the process of integration testing Rack applications, such as Rails, Sinatra or Merb (https://github.com/jnicklas/capybara)
