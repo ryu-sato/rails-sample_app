@@ -55,7 +55,7 @@ end
 
 group :development do
   # A debugging tool for your Ruby on Rails applications. (https://github.com/rails/web-console)
-  gem 'web-console',           '3.5.1'
+  gem 'web-console',           '3.7.0'
   # Listen to file modifications (https://github.com/guard/listen)
   gem 'listen',                '3.7.1'
   # Rails application preloader (https://github.com/rails/spring)
