@@ -11,7 +11,7 @@ gem 'sass-rails',              '>= 5.0.5'
 # Ruby wrapper for UglifyJS JavaScript compressor (http://github.com/lautis/uglifier)
 gem 'uglifier',                '4.2.0'
 # CoffeeScript adapter for the Rails asset pipeline. (https://github.com/rails/coffee-rails)
-gem 'coffee-rails',            '4.2.2'
+gem 'coffee-rails',            '5.0.0'
 # Use jQuery with Rails 4+ (https://github.com/rails/jquery-rails)
 gem 'jquery-rails',            '4.3.1'
 # Turbolinks makes navigating your web application faster (https://github.com/turbolinks/turbolinks)
@@ -46,7 +46,7 @@ group :development, :test do
   # Ruby 2.0 fast debugger - base + CLI (http://github.com/deivid-rodriguez/byebug)
   gem 'byebug',  '11.0.1', platform: :mri
   # RSpec for Rails (https://github.com/rspec/rspec-rails)
-  gem 'rspec-rails', '~> 3.6.0'
+  gem 'rspec-rails', '~> 5.1.2'
   # factory_bot_rails provides integration between factory_bot and rails 3 or newer (http://github.com/thoughtbot/factory_bot_rails)
   gem 'factory_bot_rails', '~> 4.10.0'
   # rspec command for spring (https://github.com/jonleighton/spring-commands-rspec)
@@ -57,7 +57,7 @@ group :development do
   # A debugging tool for your Ruby on Rails applications. (https://github.com/rails/web-console)
   gem 'web-console',           '3.5.1'
   # Listen to file modifications (https://github.com/guard/listen)
-  gem 'listen',                '3.0.8'
+  gem 'listen',                '3.7.1'
   # Rails application preloader (https://github.com/rails/spring)
   gem 'spring',                '2.0.2'
   # Makes spring watch files using the listen gem. (https://github.com/jonleighton/spring-watcher-listen)
