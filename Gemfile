@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # Full-stack web application framework. (http://rubyonrails.org)
-gem 'rails',                   '5.2.3'
+gem 'rails',                   '5.2.8.1'
 # bootstrap-sass is a Sass-powered version of Bootstrap 3, ready to drop right into your Sass powered applications. (https://github.com/twbs/bootstrap-sass)
 gem 'bootstrap-sass',          '~> 3.4.1'
 # Puma is a simple, fast, threaded, and highly concurrent HTTP 1.1 server for Ruby/Rack applications (http://puma.io)
