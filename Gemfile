@@ -46,7 +46,7 @@ group :development, :test do
   # Ruby 2.0 fast debugger - base + CLI (http://github.com/deivid-rodriguez/byebug)
   gem 'byebug',  '11.0.1', platform: :mri
   # RSpec for Rails (https://github.com/rspec/rspec-rails)
-  gem 'rspec-rails', '~> 3.6.0'
+  gem 'rspec-rails', '~> 5.1.2'
   # factory_bot_rails provides integration between factory_bot and rails 3 or newer (http://github.com/thoughtbot/factory_bot_rails)
   gem 'factory_bot_rails', '~> 4.10.0'
   # rspec command for spring (https://github.com/jonleighton/spring-commands-rspec)
