@@ -11,7 +11,7 @@ gem 'sass-rails',              '>= 5.0.5'
 # Ruby wrapper for UglifyJS JavaScript compressor (http://github.com/lautis/uglifier)
 gem 'uglifier',                '4.1.20'
 # CoffeeScript adapter for the Rails asset pipeline. (https://github.com/rails/coffee-rails)
-gem 'coffee-rails',            '4.2.2'
+gem 'coffee-rails',            '5.0.0'
 # Use jQuery with Rails 4+ (https://github.com/rails/jquery-rails)
 gem 'jquery-rails',            '4.3.1'
 # Turbolinks makes navigating your web application faster (https://github.com/turbolinks/turbolinks)
