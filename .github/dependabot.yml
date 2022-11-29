@@ -22,4 +22,4 @@ updates:
   - "gem"
   - "dependencies"
   - "increase"
-  target-branch: HEAD
+  target-branch: master
