@@ -3,7 +3,7 @@ updates:
 - package-ecosystem: bundler
   directory: "/"
   schedule:
-    interval: daily
+    interval: hourly
     timezone: Asia/Tokyo
   rebase-strategy: disabled
   versioning-strategy: lockfile-only
@@ -14,7 +14,7 @@ updates:
 - package-ecosystem: bundler
   directory: "/"
   schedule:
-    interval: daily
+    interval: hourly
     timezone: Asia/Tokyo
   rebase-strategy: disabled
   versioning-strategy: increase
