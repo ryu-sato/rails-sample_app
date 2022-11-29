@@ -13,7 +13,7 @@ gem 'uglifier',                '4.2.0'
 # CoffeeScript adapter for the Rails asset pipeline. (https://github.com/rails/coffee-rails)
 gem 'coffee-rails',            '5.0.0'
 # Use jQuery with Rails 4+ (https://github.com/rails/jquery-rails)
-gem 'jquery-rails',            '4.3.1'
+gem 'jquery-rails',            '4.5.1'
 # Turbolinks makes navigating your web application faster (https://github.com/turbolinks/turbolinks)
 gem 'turbolinks',              '5.0.1'
 # Create JSON structures via a Builder-style DSL (https://github.com/rails/jbuilder)
