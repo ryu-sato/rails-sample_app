@@ -44,7 +44,7 @@ group :development, :test do
   # This module allows Ruby programs to interface with the SQLite3 database engine (http://www.sqlite.org) (https://github.com/sparklemotion/sqlite3-ruby)
   gem 'sqlite3', '1.3.13'
   # Ruby 2.0 fast debugger - base + CLI (http://github.com/deivid-rodriguez/byebug)
-  gem 'byebug',  '11.0.1', platform: :mri
+  gem 'byebug',  '11.1.3', platform: :mri
   # RSpec for Rails (https://github.com/rspec/rspec-rails)
   gem 'rspec-rails', '~> 5.1.2'
   # factory_bot_rails provides integration between factory_bot and rails 3 or newer (http://github.com/thoughtbot/factory_bot_rails)
