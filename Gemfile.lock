@@ -96,7 +96,7 @@ GEM
     e2mmap (0.1.0)
     erubi (1.11.0)
     excon (0.62.0)
-    execjs (2.7.0)
+    execjs (2.8.1)
     factory_bot (4.10.0)
       activesupport (>= 3.0.0)
     factory_bot_rails (4.10.0)
@@ -486,7 +486,7 @@ GEM
     turbolinks-source (5.2.0)
     tzinfo (1.2.10)
       thread_safe (~> 0.1)
-    uglifier (4.1.20)
+    uglifier (4.2.0)
       execjs (>= 0.3.0, < 3)
     unf (0.1.4)
       unf_ext
@@ -548,7 +548,7 @@ DEPENDENCIES
   therubyracer
   turbolinks (= 5.0.1)
   tzinfo-data
-  uglifier (= 4.1.20)
+  uglifier (= 4.2.0)
   web-console (= 3.5.1)
   will_paginate
 

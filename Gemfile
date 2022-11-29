@@ -9,7 +9,7 @@ gem 'puma',                    '3.9.1'
 # Sass adapter for the Rails asset pipeline. (https://github.com/rails/sass-rails)
 gem 'sass-rails',              '>= 5.0.5'
 # Ruby wrapper for UglifyJS JavaScript compressor (http://github.com/lautis/uglifier)
-gem 'uglifier',                '4.1.20'
+gem 'uglifier',                '4.2.0'
 # CoffeeScript adapter for the Rails asset pipeline. (https://github.com/rails/coffee-rails)
 gem 'coffee-rails',            '4.2.2'
 # Use jQuery with Rails 4+ (https://github.com/rails/jquery-rails)
