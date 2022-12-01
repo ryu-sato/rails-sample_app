@@ -91,7 +91,7 @@ group :production do
   # Pg is the Ruby interface to the {PostgreSQL RDBMS}[http://www.postgresql.org/] (https://bitbucket.org/ged/ruby-pg)
   gem 'pg',  '1.4.5'
   # brings clouds to you (http://github.com/fog/fog)
-  gem 'fog', '1.42'
+  gem 'fog', '2.3.0'
 end
 
 # Windows環境ではtzinfo-dataというgemを含める必要があります
