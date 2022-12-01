@@ -42,7 +42,7 @@ gem 'bootstrap-will_paginate'
 
 group :development, :test do
   # This module allows Ruby programs to interface with the SQLite3 database engine (http://www.sqlite.org) (https://github.com/sparklemotion/sqlite3-ruby)
-  gem 'sqlite3', '1.3.13'
+  gem 'sqlite3', '1.5.4'
   # Ruby 2.0 fast debugger - base + CLI (http://github.com/deivid-rodriguez/byebug)
   gem 'byebug',  '11.1.3', platform: :mri
   # RSpec for Rails (https://github.com/rspec/rspec-rails)

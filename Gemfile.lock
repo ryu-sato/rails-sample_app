@@ -552,7 +552,8 @@ GEM
       actionpack (>= 5.2)
       activesupport (>= 5.2)
       sprockets (>= 3.0.0)
-    sqlite3 (1.3.13)
+    sqlite3 (1.5.4)
+      mini_portile2 (~> 2.8.0)
     therubyracer (0.12.3)
       libv8 (~> 3.16.14.15)
       ref
@@ -626,7 +627,7 @@ DEPENDENCIES
   spring (= 2.0.2)
   spring-commands-rspec
   spring-watcher-listen (= 2.0.1)
-  sqlite3 (= 1.3.13)
+  sqlite3 (= 1.5.4)
   therubyracer
   turbolinks (= 5.0.1)
   tzinfo-data
