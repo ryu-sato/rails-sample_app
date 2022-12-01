@@ -30,7 +30,7 @@ gem 'faker',                   '1.7.3'
 
 # 画像アップロード
 # Ruby file upload library (https://github.com/carrierwaveuploader/carrierwave)
-gem 'carrierwave',             '1.2.2'
+gem 'carrierwave',             '2.2.3'
 # Manipulate images with minimal use of memory via ImageMagick / GraphicsMagick (https://github.com/minimagick/minimagick)
 gem 'mini_magick',             '4.7.0'
 
