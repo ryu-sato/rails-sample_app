@@ -42,7 +42,7 @@ gem 'bootstrap-will_paginate'
 
 group :development, :test do
   # This module allows Ruby programs to interface with the SQLite3 database engine (http://www.sqlite.org) (https://github.com/sparklemotion/sqlite3-ruby)
-  gem 'sqlite3', '1.3.13'
+  gem 'sqlite3', '1.5.4'
   # Ruby 2.0 fast debugger - base + CLI (http://github.com/deivid-rodriguez/byebug)
   gem 'byebug',  '11.1.3', platform: :mri
   # RSpec for Rails (https://github.com/rspec/rspec-rails)
@@ -89,9 +89,9 @@ end
 
 group :production do
   # Pg is the Ruby interface to the {PostgreSQL RDBMS}[http://www.postgresql.org/] (https://bitbucket.org/ged/ruby-pg)
-  gem 'pg',  '1.1.4'
+  gem 'pg',  '1.4.5'
   # brings clouds to you (http://github.com/fog/fog)
-  gem 'fog', '1.42'
+  gem 'fog', '2.3.0'
 end
 
 # Windows環境ではtzinfo-dataというgemを含める必要があります
