@@ -59,7 +59,7 @@ GEM
     autoprefixer-rails (9.5.0)
       execjs
     backport (1.2.0)
-    bcrypt (3.1.13)
+    bcrypt (3.1.18)
     benchmark (0.2.0)
     bindex (0.8.1)
     bootstrap-sass (3.4.1)
@@ -597,7 +597,7 @@ PLATFORMS
 DEPENDENCIES
   annotate
   annotate_gem
-  bcrypt (= 3.1.13)
+  bcrypt (= 3.1.18)
   bootstrap-sass (~> 3.4.1)
   bootstrap-will_paginate
   byebug (= 11.1.3)

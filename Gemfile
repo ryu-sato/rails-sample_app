@@ -19,7 +19,7 @@ gem 'turbolinks',              '5.0.1'
 # Create JSON structures via a Builder-style DSL (https://github.com/rails/jbuilder)
 gem 'jbuilder',                '2.7.0'
 # OpenBSD's bcrypt() password hashing algorithm. (https://github.com/codahale/bcrypt-ruby)
-gem 'bcrypt',                  '3.1.13'
+gem 'bcrypt',                  '3.1.18'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # Embed the V8 JavaScript interpreter into Ruby (http://github.com/cowboyd/therubyracer)
 gem 'therubyracer', platforms: :ruby
