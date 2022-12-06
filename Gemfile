@@ -17,7 +17,7 @@ gem 'jquery-rails',            '4.5.1'
 # Turbolinks makes navigating your web application faster (https://github.com/turbolinks/turbolinks)
 gem 'turbolinks',              '5.0.1'
 # Create JSON structures via a Builder-style DSL (https://github.com/rails/jbuilder)
-gem 'jbuilder',                '2.7.0'
+gem 'jbuilder',                '2.11.5'
 # OpenBSD's bcrypt() password hashing algorithm. (https://github.com/codahale/bcrypt-ruby)
 gem 'bcrypt',                  '3.1.18'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
