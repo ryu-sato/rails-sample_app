@@ -11,15 +11,5 @@ updates:
   - "gem"
   - "dependencies"
   - "lockfile-only"
-- package-ecosystem: bundler
-  directory: "/"
-  schedule:
-    interval: daily
-    timezone: Asia/Tokyo
-  rebase-strategy: disabled
-  versioning-strategy: increase
-  labels:
-  - "gem"
-  - "dependencies"
-  - "increase"
-  target-branch: master
+  allow:
+  - dependency-type: all
