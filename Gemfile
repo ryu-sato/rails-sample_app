@@ -48,7 +48,7 @@ group :development, :test do
   # RSpec for Rails (https://github.com/rspec/rspec-rails)
   gem 'rspec-rails', '~> 5.1.2'
   # factory_bot_rails provides integration between factory_bot and rails 3 or newer (http://github.com/thoughtbot/factory_bot_rails)
-  gem 'factory_bot_rails', '~> 4.10.0'
+  gem 'factory_bot_rails', '~> 6.2.0'
   # rspec command for spring (https://github.com/jonleighton/spring-commands-rspec)
   gem 'spring-commands-rspec'
 end
